@@ -1,4 +1,5 @@
 
+"use client"
 import HomePage from "./pages/home/home"
 function App() {
 
