@@ -1,10 +1,10 @@
 // import React from 'react'
-import HeroSection from "./HomeComponent/HeroSection"
+import Navbar from "../../components/Navbar"
 
 export default function Home() {
     return (
         <div>
-            <HeroSection />
+            <Navbar />
         </div>
     )
 }
