@@ -2,8 +2,7 @@
 
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import { User } from "iconsax-react";
-
+ 
 export default function Header() {
   const links = [
     { name: "Home", href: "/home" },
@@ -31,7 +30,7 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {links.map((link, index) => (
-            <Link key={index} href={link.href} className="text-lg font-semibold leading-6 text-gray-900">
+            <Link key={index} to={link.href} className="text-lg font-semibold leading-6 text-gray-900">
               {link.name}
             </Link>
           ))}
