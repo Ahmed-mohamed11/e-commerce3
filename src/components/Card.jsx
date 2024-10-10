@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-
+ 
 export default function Card({ id, icon, name, adminName, rooms, click }) {
   return (
     <div onClick={click} className={`w-full cursor-pointer`}>
@@ -31,21 +30,7 @@ export default function Card({ id, icon, name, adminName, rooms, click }) {
             <p className="text-slate-400 text-center">{rooms}</p>{" "}
           </div>
 
-          {/* <div
-            className={`flex justify-center mt-2
-             p-0.5 h-full border w-2/6 hover:text-white
-             border-orange-300 hover:bg-orange-500 text-orange-800
-            ease-linear duration-100 hover:translate-y-0.5`}
-          >
-            <Link
-              onClick={click}
-              className={` w-full h-full mx-auto ease-linear duration-100 text-center
-              bg-orange-300 hover:bg-orange-500
-                p-2 font-semibold`}
-            >
-              Continue
-            </Link>
-          </div> */}
+        
         </div>
       </div>
     </div>
