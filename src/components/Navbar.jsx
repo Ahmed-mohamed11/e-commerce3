@@ -1,13 +1,15 @@
 "use client"
 
 import { Link } from "react-router-dom";
+import Button from "./Button";
+import { User } from "iconsax-react";
 
 export default function Header() {
   const links = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#" },
-    { name: "Marketplace", href: "#" },
-    { name: "Company", href: "#" }
+    { name: "Home", href: "/home" },
+    { name: "Offers", href: "/offers" },
+    { name: "Contact", href: "/contact" },
+    { name: "Checkout", href: "/checkout" }
   ];
 
   return (
@@ -29,15 +31,20 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {links.map((link, index) => (
-            <Link key={index} href={link.href} className="text-sm font-semibold leading-6 text-gray-900">
+            <Link key={index} href={link.href} className="text-lg font-semibold leading-6 text-gray-900">
               {link.name}
             </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </Link>
+          <div className="flex items-center space-x-4">
+            <img
+              className="h-10 w-10 rounded-full"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=256&h=256&q=80"
+              alt="User Image"
+            />
+            <Button>Become a Seller</Button>
+          </div>
         </div>
       </nav>
 
@@ -47,7 +54,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="Company Logo" />
+              <img className="h-10 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="Company Logo" />
             </Link>
             <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700">
               <span className="sr-only">Close menu</span>
@@ -74,6 +81,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </header >
   );
 }
