@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
 import Offers from "../pages/offers/Offers";
 import Home from "../pages/home/home";
- 
+
 
 
 
@@ -26,7 +26,7 @@ const AdminPages = () => {
                     element={<Offers />}
                 />
 
-             </Routes>
+            </Routes>
         </Suspense>
     );
 };
