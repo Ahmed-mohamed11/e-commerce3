@@ -10,14 +10,10 @@ const AdminPages = () => {
     return (
         <Suspense fallback={<div />}>
             <Routes>
+               
                 <Route
                     exact
-                    path={`${import.meta.env.VITE_PUBLIC_URL}/`}
-                    element={<div>helllo</div>}
-                />
-                <Route
-                    exact
-                    path={`/home`}
+                    path={`/`}
                     element={<Home />}
                 />
                 <Route
